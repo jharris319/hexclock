@@ -14,8 +14,8 @@ function updateClock() {
   document.getElementById('clock').innerHTML = hex;
   document.body.style.backgroundColor = hex;
 
-  window.setInterval(function(){ updateClock(); }, 1000);
+  setTimeout(updateClock, 1000);
 }
 
 updateClock();
-setTimeout(function() { setupTransitions(); }, 1000);
+setTimeout(setupTransitions, 1000);
