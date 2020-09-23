@@ -1,3 +1,7 @@
+function setupTransitions() {
+  document.body.style.transition = 'background-color 1s linear';
+}
+
 function updateClock() {
   var d = new Date();
 
@@ -9,10 +13,9 @@ function updateClock() {
 
   document.getElementById('clock').innerHTML = hex;
   document.body.style.backgroundColor = hex;
+
+  window.setInterval(function(){ updateClock(); }, 1000);
 }
 
-document.addEventListener('DOMContentLoaded', function(){
-  window.setInterval(function(){
-    updateClock();
-  }, 1000);
-}, false);
+updateClock();
+setTimeout(function() { setupTransitions(); }, 1000);

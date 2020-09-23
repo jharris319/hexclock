@@ -1,5 +1,4 @@
 body {
-  transition: background-color 1s linear;
   position: relative;
   height: 100vh;
   background-color: #000;
